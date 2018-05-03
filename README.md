@@ -37,12 +37,12 @@ Why use this boilerplate? It comes with a lot of features out of the box that wi
 
 ### Writing The Plugin
 
-Let's say you want to create a webpack plugin called `DemoPlugin` that prints "Hello World" wants webpack compilation is done (super useful!).
+Let's say you want to create a webpack plugin called `DemoPlugin` that prints "Hello World" once webpack compilation is done (super useful!).
 
 To do this, we will need to make sure our code fulfills a few important properties:
 
 1. It should be a class that is named the same as your plugin. In this case we will use `DemoPlugin`.
-2. It should have a class method `apply` that takes a `compiler` parameter. This compiler parameter is described in more details in the [compiler hook documentation](https://webpack.js.org/api/compiler-hooks/#done).
+2. It should have a class method `apply` that takes a `compiler` parameter. This compiler parameter is described in more details in the [compiler hook documentation](https://webpack.js.org/api/compiler-hooks).
 3. Inside the apply method, we will hook into the [done lifecycle hook](https://webpack.js.org/api/compiler-hooks/#done) and do our `console.log`.
 
 Your plugin's main file will be the `src/index.js` file. It should look something like this:
