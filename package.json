@@ -1,0 +1,63 @@
+{
+  "name": "webpack-plugin-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for writing webpack plugins",
+  "main": "dist/cjs.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
+    "cross-env": "^5.1.4",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-webpack": "^1.2.5",
+    "eslint-plugin-import": "^2.11.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.5",
+    "webpack": "^4.6.0"
+  },
+  "peerDependencies": {
+    "webpack": "^4.4.0"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/*.test.js'",
+    "clean": "del-cli dist",
+    "lint": "eslint src",
+    "precommit": "lint-staged",
+    "test": "jest",
+    "test:coverage": "jest --collectCoverageFrom='src/**/*.js' --coverage"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctaylo21/webpack-plugin-boilerplate.git"
+  },
+  "keywords": [
+    "webpack",
+    "babel",
+    "plugin",
+    "jest",
+    "eslint"
+  ],
+  "author": {
+    "name": "Caleb Taylor",
+    "email": "caleb89taylor@gmail.com",
+    "url": "http://calebtaylor.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ctaylo21/webpack-plugin-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ctaylo21/webpack-plugin-boilerplate#readme"
+}
