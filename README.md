@@ -33,7 +33,7 @@ Why use this boilerplate? It comes with a lot of features out of the box that wi
 
 ## Usage
 
->This example code is already written in the repo. To see the demo plugin in action, you shouldn't need to write any new code. This is just a walkthrough of how it was written.
+>This example code is already written in `src/index.js`. To see the demo plugin in action, you shouldn't need to write any new code. This is just a walkthrough of how it was written.
 
 ### Writing The Plugin
 
